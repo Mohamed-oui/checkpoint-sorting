@@ -1,0 +1,16 @@
+PROCEDURE sort(n:INTEGER, VAR arr:ARRAY_OF INTEGER)
+VAR
+     i,j:INTEGER;
+
+BEGIN
+let n:=arr.length
+    FOR i FROM 1 TO n-1 STEP 1  DO
+        p:=arr[i];
+        j:=i;
+        WHILE (j>0 and p<arr[j]) DO
+            arr[j]:=arr[j-1];
+            j:=j-1;
+        END_WHILE
+        arr[j]:=p;
+    END_FOR
+END
